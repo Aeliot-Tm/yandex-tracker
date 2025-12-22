@@ -34,7 +34,7 @@ class Tracker
         if (!$token) {
             throw new TrackerAuthConfigException('Token is required');
         }
-        if (!$orgId || !$cloudOrgId) {
+        if ($orgId || $cloudOrgId) {
             throw new TrackerAuthConfigException('Either orgId or cloudOrgId is required');
         }
 
